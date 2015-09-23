@@ -269,6 +269,8 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sextant (0.2.4)
+      rails (>= 3.2)
     sidekiq (3.5.0)
       celluloid (~> 0.17.0)
       connection_pool (~> 2.2, >= 2.2.0)
@@ -363,6 +365,7 @@ DEPENDENCIES
   rolify
   rspec-rails
   sass-rails (~> 5.0)
+  sextant
   sidekiq
   simple_form
   simplecov

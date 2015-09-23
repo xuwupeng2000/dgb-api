@@ -31,6 +31,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'simple_form'
 
 group :development, :test do
+  gem 'sextant'
   gem 'quiet_assets'
   gem "better_errors"
   gem 'pry-rails'
