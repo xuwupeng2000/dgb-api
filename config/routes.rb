@@ -29,4 +29,12 @@ Rails.application.routes.draw do
 
   root 'pages#welcome'
 
+  devise_for :users, :controllers => { registrations: "registrations", sessions: "sessions"}
+
+  devise_scope :user do
+    post :sign_in, :to => 'sessions#create'
+    post :sign_up, :to => 'registrations#create'
+    post :reset_password, to: 'passwords#create'
+  end
+
 end
