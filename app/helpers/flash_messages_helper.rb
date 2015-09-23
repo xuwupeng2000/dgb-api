@@ -10,7 +10,7 @@ module FlashMessagesHelper
   end
 
   def flash_message(type, message)
-    color = type == :notice ? :success : :error
+    color = type == 'notice' ? :success : :error
 
     raw(content_tag(:div, class: "alert alert-#{color}") do
       content_tag(:a, raw("&times;"), class: 'close', :data => {:dismiss => 'alert'}) +

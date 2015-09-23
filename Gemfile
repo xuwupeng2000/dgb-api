@@ -50,6 +50,7 @@ group :test do
 end
 
 group :development do
+  gem 'colored'
   gem 'letter_opener'
   gem "bullet"
   gem 'capistrano-rails'

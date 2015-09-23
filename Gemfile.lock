@@ -126,6 +126,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    colored (1.2)
     colorize (0.7.5)
     connection_pool (2.2.0)
     daemons (1.2.3)
@@ -346,6 +347,7 @@ DEPENDENCIES
   capistrano-rails
   capybara
   coffee-rails (~> 4.1.0)
+  colored
   database_cleaner
   devise
   draper
