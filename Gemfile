@@ -6,6 +6,8 @@ gem 'pg'
 gem 'jbuilder', '~> 2.0'
 gem 'thin'
 
+gem 'sidekiq'
+
 #Authentication and authorization
 gem 'devise'
 gem "rolify"
@@ -44,6 +46,8 @@ group :test do
 end
 
 group :development do
+  gem 'letter_opener'
+  gem "bullet"
   gem 'capistrano-rails'
   gem 'web-console', '~> 2.0'
   gem 'spring'
