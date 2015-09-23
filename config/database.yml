@@ -1,0 +1,13 @@
+development: &development
+  adapter: postgresql
+  database: dgb_development
+  host: localhost
+  encoding: utf8
+
+staging:
+  <<: *development
+  database: dgb_staging
+
+test:
+  <<: *development
+  database: dgb_test
