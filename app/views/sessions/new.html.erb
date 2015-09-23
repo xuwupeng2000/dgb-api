@@ -1,0 +1,9 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <%= simple_form_for resource, url: sign_in_path do |f| %> 
+      <%= f.input :email %>
+      <%= f.input :password %>
+      <%= f.submit 'Save' %>
+    <% end %>
+  </div>
+</div>
