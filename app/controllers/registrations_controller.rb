@@ -30,4 +30,10 @@ class RegistrationsController < Devise::RegistrationsController
     redirect_to root_path
   end
 
+  private
+
+  def sign_up_params
+    params.require(:user).permit!
+  end
+
 end

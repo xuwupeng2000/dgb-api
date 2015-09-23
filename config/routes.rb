@@ -32,9 +32,10 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: "registrations", sessions: "sessions"}
 
   devise_scope :user do
-    post :sign_in, :to => 'sessions#create'
-    post :sign_up, :to => 'registrations#create'
+    post :sign_in, to: 'sessions#create'
+    post :sign_up, to: 'registrations#create'
     post :reset_password, to: 'passwords#create'
+    get  :logoff, to: 'sessions#destroy'
   end
 
 end

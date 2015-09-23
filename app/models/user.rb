@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
   rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -13,6 +14,7 @@ class User < ActiveRecord::Base
   has_many :orders, :dependent => :destroy
   has_many :deliverables, :through => :orders
 
+  validates_presence_of :name, message: 'please enter name'
   validates :email, email_format: { message: 'are you sure this is your email? Its format is invalid', allow_blank: true }
   validates :email, uniqueness:   { message: 'has been taken' }
   validates :email, presence:  { message: 'please enter email'}
@@ -24,4 +26,11 @@ class User < ActiveRecord::Base
     accept: true, 
     allow_nil: false, 
     message: 'must be accepted' 
+
+private
+
+  def password_required?
+    !persisted? || !password.nil? || !password_confirmation.nil?
+  end
+
 end
