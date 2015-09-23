@@ -1,3 +1,5 @@
+require File.expand_path("../../config/environment", __FILE__)
+
 require 'configs/devise'
 require 'configs/database_cleaner'
 require 'configs/capybara'
