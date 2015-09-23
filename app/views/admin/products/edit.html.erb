@@ -1,0 +1,12 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <%= simple_form_for @product, url: admin_product_path(@product) do |f| %> 
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :weight %>
+      <%= f.input :purchasing_price %>
+      <%= f.input :selling_price %>
+      <%= f.submit 'Save' %>
+    <% end %>
+  </div>
+</div>

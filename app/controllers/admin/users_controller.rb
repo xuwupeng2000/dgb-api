@@ -31,6 +31,10 @@ class Admin::UsersController < Admin::BaseController
     redirect_to admin_users_path, notice: 'successed'
   end
 
+  def destroy
+    redirect_to admin_users_path, notice: 'not support'
+  end
+
   private
 
   def user_params
