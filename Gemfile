@@ -19,6 +19,7 @@ gem 'state_machine'
 gem 'active_model_serializers'
 gem 'rails-observers'
 gem 'draper'
+gem 'validates_email_format_of'
 
 #View, css, js
 gem 'sass-rails', '~> 5.0'
@@ -27,6 +28,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'simple_form'
 
 group :development, :test do
   gem 'quiet_assets'
