@@ -1,0 +1,5 @@
+<%= simple_form_for @order, url: url_for(['admin', @user, @order ]) do |f| %> 
+  <%= f.input :customer, collection: @user.customers %>
+  <%= f.input :state, label: 'Status' %>
+  <%= f.submit 'Save' %>
+<% end %>

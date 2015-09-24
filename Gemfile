@@ -29,6 +29,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'simple_form'
+gem "select2-rails"
 
 group :development, :test do
   gem 'sextant'
