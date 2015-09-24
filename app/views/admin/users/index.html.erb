@@ -13,13 +13,19 @@
       <tr>
         <th>Name</th>
         <th>Email</th>
-        <th>Actions</th>
+        <th></th>
       </tr>
       <% @users.each do |u| %>
         <tr>
           <td> <%= u.name %> </td>
           <td> <%= u.email %> </td>
-          <td> <%= link_to 'Edit', edit_admin_user_path(u) %> </td>
+          <td> 
+            <ul>
+              <li> <%= link_to 'Edit', edit_admin_user_path(u) %></li>
+              <li> <%= link_to 'Orders', admin_user_orders_path(u) %> </li>
+              <li> <%= link_to 'Customers', admin_user_customers_path(u) %> </li>
+            </ul>
+          </td> 
         </tr>
       <% end %>
     </table>

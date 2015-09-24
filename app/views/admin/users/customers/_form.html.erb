@@ -1,0 +1,7 @@
+<%= simple_form_for @customer, url: url_for(['admin', @user, @customer ]) do |f| %> 
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :wechat_id %>
+  <%= f.submit 'Save' %>
+<% end %>
