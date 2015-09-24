@@ -1,4 +1,4 @@
-class Admin::Users::BaseController < ApplicationController
+class Admin::Users::BaseController < Admin::BaseController
   before_action :find_user
 
   protected

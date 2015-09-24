@@ -1,3 +1,14 @@
+<div class="row">
+  <div class='col-lg-12'> 
+    <ol class="breadcrumb">
+      <li> <%= link_to "Users", admin_users_path %> </li>
+      <li> <%= link_to @user.name, admin_user_path(@user) %> </li>
+      <li> <%= link_to "Customers", admin_user_customers_path %> </li>
+      <li> Edit </li>
+    </ol>
+  </div>
+</div>
+
 <div class='row'>
   <div class='col-lg-12'>
     <%= render :partial => 'form' %>
