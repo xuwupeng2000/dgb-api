@@ -15,9 +15,9 @@ class User < ActiveRecord::Base
   has_many :deliverables, :through => :orders
 
   validates_presence_of :name, message: 'please enter name'
+  validates_presence_of :email, message: 'please enter email'
   validates :email, email_format: { message: 'are you sure this is your email? Its format is invalid', allow_blank: true }
   validates :email, uniqueness:   { message: 'has been taken' }
-  validates :email, presence:  { message: 'please enter email'}
 
   validates_presence_of     :password, message: 'please enter password', if: :password_required?
   validates_confirmation_of :password, if: :password_required?
